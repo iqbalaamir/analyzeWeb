@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS styles */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            font-size: 14px; /* Reduce the font size for smaller buttons */
+            margin: 5px; /* Add margin to create space between buttons */
+            min-width: 80px; /* Set a minimum width for buttons */
+        }
+
+        #contentDiv {
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 15px; /* Increase padding for a bigger main div */
+            font-size: 16px;
+            min-height: 150px; /* Increase the minimum height of the main div */
+            overflow-y: auto;
+        }
+
+        #copyButton {
+            margin-top: 20px; /* Add margin to push the button below the content div */
+        }
+    </style>
+    <title>Web Page Analysis Plugin</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-8">
+                <h1 class="mb-4">Web Page Analysis</h1>
+                <div class="btn-group" role="group" aria-label="Analysis Options">
+                    <button id="summaryButton" class="btn btn-primary">Summary</button>
+                    <button id="majorPointsButton" class="btn btn-primary">Major Points</button>
+                </div>
+                <div id="contentDiv"></div>
+                <button id="copyButton" class="btn btn-primary d-block mx-auto">Copy to Clipboard</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="plugin.js"></script>
+</body>
+</html>
